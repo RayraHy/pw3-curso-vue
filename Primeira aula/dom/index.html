@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <div id="app">
+        <h2>Inicio dos testes</h2>
+        {{ nomeCompleto() }}
+
+        <br>
+        <a @click.prevent :href="link">ir para o google</a><br>
+        <a :href="link">ir para o google</a>
+        <p v-html="linkHtml"></p>
+
+        <p v-once>{{ pais }}</p>
+        {{ mudarPais() }}
+        <p >{{ pais }}</p>
+
+        <h2>Contador</h2>
+        <p>{{ contador }}</p>
+        <button @click="somar">+1</button>
+
+        <h2>Contador por passo</h2>
+        <p>{{ contador1 }}</p>
+        <button @click="somaar(5, $event)">+5</button>
+
+        <h2>Posição do Mouse</h2>
+        <p @mousemove="atualizarPoMouse">Mouse: {{x}} x {{y}}</p>
+
+        <p @mousemove.stop="atualizarPoMouse">Mouse: {{x}} x {{y}}
+            <span @mousemove.stop="">Parar aqui</span>
+        </p>
+
+        Modificador Keyup: <input type="text" @keyup.enter.alt="exibirAlerta" />
+
+        
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
