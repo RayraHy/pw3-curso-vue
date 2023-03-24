@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
         .caixas {
             display: flex;
@@ -20,17 +21,20 @@
         .cor-2 { background-color: black;}
         .c3 { background-color: brown;}
     </style>
+
     <title>Estilo</title>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
 
     <div id="app">
 
         <div class="caixas">
             <div class="box" :class="estilo1" @click="aplicarC1 = !aplicarC1"></div>
             <div class="box" :class="{'cor-2': aplicarC2}" @click="aplicarC2 = !aplicarC2"></div>
-            <div class="box" :class="classeCSS"></div>
+            <div class="box" :class="['box', classeCSS]"></div>
+            <div class="box" :style="{backgroundColor: 'blue'}"></div>
+            <div class="box" :style="{backgroundColor: corEscolhida}"></div>
         </div>
         <select v-model="classeCSS">
 
@@ -40,9 +44,10 @@
 
         </select>
 
+        <input type="text" v-model="corEscolhida">
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
