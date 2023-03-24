@@ -12,6 +12,7 @@ new Vue({
 
         x: 0,
         y: 0,
+
     },
     methods: {
         nomeCompleto() {
