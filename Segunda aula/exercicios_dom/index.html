@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exercicio dom</title>
+
+    <body>
+
+    <div id="desafio">
+        <!-- 1) Preencha a tag <p> abaixo com o seu Nome e Idade - usando Interpolação -->
+        <h2>Usando VueJS - SEU_NOME (IDADE)</h2>
+        <p>{{ nome }} tenho {{ idade }} anos</p>
+        <br>
+        
+        <!-- 2) Exiba sua idade multiplicada por 3 -->
+        <h2>Idade multiplicada por 3</h2>
+        <p>{{ idamult }}</p>
+        <br>
+        
+        <!-- 3) Chame uma função para exibir um número randomico
+            entre 0 and 1 (Math.random()) -->
+        <h2>Randomico</h2>
+        <p>{{ ro }}</p>
+        <button @click="rom">random</button>
+        <br>
+        
+        <!-- 4) Procure uma imagem no google e exiba na tag img 
+            fazendo o binding no atributo "src" -->
+        <div>
+            <h2>Imagem com binding</h2>
+            <img :src="img" height="400">
+        </div>
+        <br>
+        
+        <!-- 5) Inicialize o input com o seu nome (use o atributo "value") -->
+        <div>
+            <h2>Nome com atributo :value</h2>
+            <input type="text" :value="nome">
+        </div>
+        <br>
+
+        <!-- 6) Exiba um alert quando o botão for clicado -->
+        <div>
+            <h2>Alerta</h2>
+            <button @click="">Exibir Alerta</button>
+        </div>
+        <br>
+        
+        <!-- 7) Escute o evento "keydown" e armazene o valor na propriedade
+            data (dica: event.target.value) -->
+        <div>
+            <input type="text">
+            <p>{{ valor }}</p>
+        </div>
+        
+        <!-- 8) Ajuste o exercício 7 para disparar o evento "keydown" somente
+            quando a tecla for ENTER -->
+        <div>
+            <input type="text">
+            <p>{{ valor }}</p>
+        </div>
+
+        <!-- 9) Exibir em "resultado" o texto 'Valor Diferente' enquanto
+            "valor" for diferente de 37 - "valor" é alterado pelos botões.
+            Mostrar 'Valor Igual' quando "valor" for igual a 37 -->
+            
+        <!-- 10) Monitorar as mudança de "resultado" e reiniciar "valor"
+            para 0 depois de 5 segundos (dica: setTimeout(..., 5000) -->            
+        <div>
+            <p>Valor atual: {{ valor }}</p>
+            <button @click="valor += 5">Somar 5</button>
+            <button @click="valor += 1">Somar 1</button>
+            <p>{{ resultado }}</p>
+        </div>
+        
+        <!-- 11) Crie duas classes CSS e associe a div usando a
+            sintaxe de array -->
+        <div>Estou sem classe CSS :(</div>
+
+        <!-- 12) Aplique na div abaixo a classe informada pelo usuário
+            (crie classe CSS de exemplo). -->
+        <div>
+            <input type="text">
+            <div></div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
