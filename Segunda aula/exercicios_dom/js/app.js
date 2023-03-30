@@ -7,8 +7,18 @@ new Vue({
         idamult: 22 * 3,
         ro: 0,
         img: 'https://images4.alphacoders.com/227/227926.jpg',
-
-
+        valor: '',
+        valor2: 0
+    },
+    watch: {
+        resultado() {
+            setTimeout()
+        }
+    },
+    computed: {
+        resultado(){
+            return this.valor2 !== 37 ? "Valor diferente de 37" : ""
+        }
     },
     methods: {
         rom(){
@@ -16,6 +26,9 @@ new Vue({
         },
         alert(){
             window.alert('sono')
+        },
+        armazena(){
+
         }
 
     },
