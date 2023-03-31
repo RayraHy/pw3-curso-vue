@@ -52,7 +52,8 @@
         <!-- 7) Escute o evento "keydown" e armazene o valor na propriedade
             data (dica: event.target.value) -->
         <div>
-            <input type="text">
+            <h2>keydown</h2>
+            <input @keydown="armazena" type="text">
             <p>{{ valor }}</p>
         </div>
         
@@ -71,20 +72,20 @@
             para 0 depois de 5 segundos (dica: setTimeout(..., 5000) -->            
         <div>
             <p>Valor atual: {{ valor }}</p>
-            <button @click="valor += 5">Somar 5</button>
-            <button @click="valor += 1">Somar 1</button>
+            <button @click="valor2 += 5">Somar 5</button>
+            <button @click="valor2 += 1">Somar 1</button>
             <p>{{ resultado }}</p>
         </div>
         
         <!-- 11) Crie duas classes CSS e associe a div usando a
             sintaxe de array -->
-        <div>Estou sem classe CSS :(</div>
+        <div :class="['classe1','classe2']">classe CSS :(</div>
 
         <!-- 12) Aplique na div abaixo a classe informada pelo usuário
             (crie classe CSS de exemplo). -->
         <div>
-            <input type="text">
-            <div></div>
+            <input type="text" v-model="">
+            <div :class=""></div>
         </div>
 
     </div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Condicionais e listas</title>
+    
+</head>
+<body>
+    
+    <main id="app">
+
+        <template v-if="logado">
+            <p>Usuario logado: {{ nome }}</p>
+            <p>Perfil: admin</p>
+        </template>
+
+        <p v-else-if="anonimo">Navegando como anonimo</p>
+        <p v-else>Nenhum usuario logado</p>
+        <button @click="logado = !logado">{{ logado ? "Sair" : "Entrar" }}</button>
+        <input type="checkbox" v-model="anonimo">
+        <label for="anonimo">Navegação anônima</label>
+        <hr>
+        <footer v-show="logado">
+            Desenvolvido para o(a) {{nome}}
+        </footer>
+        <footer v-show="!logado">
+            Desenvolvido com o poder do Sono
+        </footer>
+
+        <h2>Listas</h2>
+        <ul>
+            <li :key="index" v-for="(cor, index) in cores">{{index}} - {{ cor }}</li>
+            <li style="display: none;">
+                <template v-for="(cor, index) in cores">
+                    <h2>{{cor}}</h2>
+                    <p>{{index}}</p>
+                </template>
+            </li> 
+        </ul>
+        <hr>
+
+        <ul>
+            <li v-for="pessoa in pessoas">
+                <template v-for="(valor, chave) in pessoa">
+                    {{chave}} = {{valor}} <br>
+                </template>
+            </li>
+        </ul>
+        <hr>
+
+        <ul>
+            <li :key="numero" v-for="numero in 10">{{ numero }}</li>
+        </ul>
+        <hr>
+
+        <ul>
+            <li :key="index" v-for="letra in 'Brasil'">{{letra}}</li>
+        </ul>
+        <hr>
+
+        <input type="text" @keyup.enter="cores.push($event.target.value)">
+
+        <ul>
+            <li></li>
+        </ul>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
