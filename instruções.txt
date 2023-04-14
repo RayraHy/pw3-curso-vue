@@ -1,0 +1,35 @@
+-- instruçao do cmd para usar nvm ---
+nvm install lts
+nvm use --lts
+
+
+-- instruçao de cmd para iniciar o servidor do VUE--
+primeiro istalar o pacote
+npm install -g @vue/cli
+
+depois verificar a verçao istalada
+vue -V
+
+-- para iniciar um projeto vue no terminal(cmd) do visual code--
+cd vue-cli -> nome da pasta que deve ser criada
+vue create project vue-aula
+vue2/
+use npm
+cd project
+npm run serve
+
+-- criar um novo copiando o anterior --
+mkdir projeto-2
+cd projeto-2
+vue create .
+
+-- add plugin electron--
+vue add electron-builder
+
+-- instruçao para baixar no pc--
+extençao do chrome
+Vue.js devtools -> saber qual pagina e feita em vue
+
+-- instruçao para baixar no Visual studio--
+extençao 
+vue languange feature (volar)

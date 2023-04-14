@@ -33,7 +33,7 @@ const inst = new Vue({
 inst.$mount('#appe');
 
 const inst1 = new Vue({
-    templete: ' <div>{{titulo}}<button @click="alterar">Alterar</button></div> ',
+    template: ' <div>{{titulo}}<button @click="alterar">Alterar</button></div> ',
 
     data: {
         titulo: 'Teste',
