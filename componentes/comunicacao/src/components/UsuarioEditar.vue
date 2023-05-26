@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import barramento from '../barramento'
+import barramento from '../barramento' 
 export default {
     props: {
         nome: {
