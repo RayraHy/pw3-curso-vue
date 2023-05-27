@@ -3,7 +3,7 @@
 		<h1>Registrar Reclamação</h1>
 		<div class="conteudo">
 			<form class="painel" v-if="!enviado">
-				<div class="cabecalho">Formulário</div>
+				<div class="cabecalho">Formulário</div> 
 					<Rotulo nome="E-mail">
 						<input type="text" v-model.lazy="form.email">
 					</Rotulo>
