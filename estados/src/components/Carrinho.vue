@@ -1,5 +1,5 @@
 <template>
-    <Painel titulo="Carrinho" azul :notificacao="produtos.length">
+    <Painel titulo="Carrinho" azul :notificacao="getProdutos.length">
         <div class="carrinho">
             <table>
                 <thead>
@@ -10,7 +10,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="produto in produtos" :key="produto.nome">
+                    <tr v-for="produto in getProdutos" :key="produto.nome">
                         <td>{{ produto.nome }}</td>
                         <td>{{ produto.quantidade }}</td>
                         <td>{{ produto.preco | dinheiro }}</td>
@@ -30,10 +30,7 @@ import { mapGetters } from 'vuex';
 
 export default {
     computed: {
-        ...mapGetters(['valorTotal']),
-        produtos() {
-            return this.$store.state.produtos;
-        },
+        ...mapGetters("carrinho", ["valorTotal", "getProdutos"]),
     },
 }
 </script>
