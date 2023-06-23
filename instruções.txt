@@ -39,3 +39,6 @@ npm i --save vuex@3.0.1 -E
 
 -- para o router
 npm i --save vue-router@3.0.2 -E
+
+-- deploy 
+vercel.com
