@@ -1,4 +1,4 @@
-# pw3-curso-vue
+# vue3
 
 ## Project setup
 ```
